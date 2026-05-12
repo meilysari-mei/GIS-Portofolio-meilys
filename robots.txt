@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://meilysari-mei.github.io/GIS-Portofolio-meilys/sitemap.xml

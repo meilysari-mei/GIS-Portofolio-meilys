@@ -192,8 +192,8 @@ body {
 .desc-box > a:first-child,
 .desc-box > a:first-of-type {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 0.95rem;
+  font-style: normal;
+  font-size: 1.1rem;
   color: var(--text-primary);
   opacity: 0.85;
 }

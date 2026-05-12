@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Meily's GIS Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- ===== NAVBAR ===== -->
+    <header class="header" id="mainHeader">
+        <a href="index3_1.html" class="logo">Meily's GIS Portofolio<span>.</span></a>
+        <nav class="navbar" id="navbar">
+            <a href="index3_1.html" class="nav-link">Home</a>
+            <a href="index3_1.html#slide-about" class="nav-link">About</a>
+            <a href="portfolio.html" class="nav-link active">Portfolio</a>
+            <a href="certificates.html" class="nav-link">Certificates</a>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </header>
+    
+<div class="slide-wrapper" id="slideWrapper">
+<section class="slide slide-portfolio" id="slide-portfolio">
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+        <div class="hero-eyebrow">
+            <span>GIS · Remote Sensing · Spatial Analysis</span>
+        </div>
+        <h1 class="hero-title">
+            <em>Selected Work</em>
+            My <span class="outline">Portfolio</span>
+        </h1>
+        <p class="hero-desc">
+            A collection of spatial analysis projects — from network routing and overlay analysis to satellite remote sensing and urban mapping.
+        </p>
+    </section>
+
+    <!-- ===== FILTER TABS ===== -->
+    <div class="tab-bar">
+        <button class="tab-btn active" onclick="filterCategory('all', this)">All</button>
+        <button class="tab-btn" onclick="filterCategory('digitizing', this)">Digitizing &amp; Georef</button>
+        <button class="tab-btn" onclick="filterCategory('network', this)">Network Analysis</button>
+        <button class="tab-btn" onclick="filterCategory('overlay', this)">Overlay Analysis</button>
+        <button class="tab-btn" onclick="filterCategory('remote', this)">Remote Sensing</button>
+        <button class="tab-btn" onclick="filterCategory('thesis', this)">Thesis</button>
+    </div>
+
+    <!-- ===== PAGE BODY ===== -->
+    <div class="page-body">
+
+        <!-- ──────── DIGITIZING & GEOREFERENCING ──────── -->
+        <div class="category-section reveal" data-category="digitizing">
+            <div class="category-heading">
+                <span class="cat-num">01</span>
+                <div>
+                    <div class="cat-label">Digitizing</div>
+                    <div class="cat-name">Digitizing &amp; Georeferencing</div>
+                </div>
+                <div class="cat-divider"></div>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQQlaIdBhU7_SJkEL5KIJNQ1AbQ7qXHf77Uctyx24M_zsrk?width=1920&height=1049"
+                             alt="Georeference Batavia" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="digitizingGeoreference.html" class="card-title">Georeference and Digitize Batavia 1945</a>
+                        <p class="card-desc">Fundamental method to digitalize an old printed map into digital data and a digital map.</p>
+                        <a href="digitizingGeoreference.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ──────── NETWORK ANALYSIS ──────── -->
+        <div class="category-section reveal" data-category="network">
+            <div class="category-heading">
+                <span class="cat-num">02</span>
+                <div>
+                    <div class="cat-label">Routing &amp; Accessibility</div>
+                    <div class="cat-name">Network Analysis</div>
+                </div>
+                <div class="cat-divider"></div>
+            </div>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQQKB025qgf-S5GYfJ4T4b11AddDhOJRtO-UKJomptYgXpk?width=256"
+                             alt="Best Route" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="fastestroute.html" class="card-title">The Best Route Analysis</a>
+                        <p class="card-desc">Determining the quickest route between points by considering speed limits, road types, and other impedance factors.</p>
+                        <a href="fastestroute.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQRxsGxMGCgqS5yPXUujYPEiAUnFR1H-7uwGDubJvCM3J-U?width=256"
+                             alt="Closest Facility" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="E:\BELAJAR\HTML_PORTO3\BODY_EDITED\closestFacility.html" class="card-title">Closest Facility Analysis</a>
+                        <p class="card-desc">Finding the closest facility to an accident location using network-based proximity analysis.</p>
+                        <a href="E:\BELAJAR\HTML_PORTO3\BODY_EDITED\closestFacility.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQR90SlZAkd-SrmyKOc8t5v3AaWcxKRf31QtHShC8msVIkw?width=256"
+                             alt="Service Area" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="servicearea.html" class="card-title">Service Area Analysis</a>
+                        <p class="card-desc">Mapping regions that encompass all accessible streets within a specified impedance threshold.</p>
+                        <a href="servicearea.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTkWc9Z3QBnSqZnz9ECeVoXAeWtBJ0rFNi3949x7pD1Wjc?width=256"
+                             alt="Tsunami Evacuation" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="TsunamiRoute.html" class="card-title">Closest Facility Analysis: Tsunami Evacuation Map Plan</a>
+                        <p class="card-desc">Applying network analysis to map accessible evacuation routes and facilities for tsunami disaster preparedness.</p>
+                        <a href="TsunamiRoute.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQShAbGrK6D4TJRjeTIQZcIxAd-JGaS46pGrSqKHkZNZrGI?height=256"
+                             alt="Urban Access Python" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="UrbanAccessPY.html" class="card-title">Analyzing Urban Access with Python &amp; OSM</a>
+                        <p class="card-desc">What accessibility looks like in real cities — not through policies or plans, but through actual, mappable data using OSMnx.</p>
+                        <a href="UrbanAccessPY.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ──────── OVERLAY ANALYSIS ──────── -->
+        <div class="category-section reveal" data-category="overlay">
+            <div class="category-heading">
+                <span class="cat-num">03</span>
+                <div>
+                    <div class="cat-label">Spatial Decision Making</div>
+                    <div class="cat-name">Overlay Analysis</div>
+                </div>
+                <div class="cat-divider"></div>
+            </div>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQT2HCx9b2xMRbBe7ClQLaViAb24GGpqhY_upTEz2E_Pcqc?width=256"
+                             alt="Land Cover Changes" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="landchanges.html" class="card-title">GIS for Agriculture: Land Cover Changes Analysis</a>
+                        <p class="card-desc">Using NDVI to identify vegetation coverage changes from 2016 to 2025 in Tesso Nilo National Park.</p>
+                        <a href="landchanges.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQR3JqPantI8QLZx-TEU3JtDAaz2Ax6QPIxbu7t9OUj_4AA?width=256"
+                             alt="Crop Suitability" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="cropSuit.html" class="card-title">GIS for Agriculture: Crop Land Suitability Analysis</a>
+                        <p class="card-desc">Determining suitable land for crops using spatial analysis and the Analytical Hierarchy Process (AHP) method.</p>
+                        <a href="cropSuit.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQSSGV3mLIaGSL1T-hg4x0U0ASt2FcfPQ6XlJAKuqgo7BE0?width=256"
+                             alt="Heat Map" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="heatMap.html" class="card-title">Heat Map Analysis</a>
+                        <p class="card-desc">Visualizing spatial patterns and trends using the Kernel Density Estimation method.</p>
+                        <a href="heatMap.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQRORoawuhH8Rq8OXmCGu-x8AXoHV84pIcep3gdXj7dEIjc?width=256"
+                             alt="Site Selection" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="SiteSelection.html" class="card-title">Site Selection Analysis</a>
+                        <p class="card-desc">Combining multiple spatial data layers to find the most optimal location for a specific need or public facility.</p>
+                        <a href="SiteSelection.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ──────── REMOTE SENSING ──────── -->
+        <div class="category-section reveal" data-category="remote">
+            <div class="category-heading">
+                <span class="cat-num">04</span>
+                <div>
+                    <div class="cat-label">Satellite Imagery</div>
+                    <div class="cat-name">Remote Sensing</div>
+                </div>
+                <div class="cat-divider"></div>
+            </div>
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTj9pOjvqlYTbugyvZdpYPXAZ8mGOeRw-p_ZCeFLriq2rI?width=256"
+                             alt="Urban Density" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="urbanDensity.html" class="card-title">Urban Density</a>
+                        <p class="card-desc">Using spectral bands from Landsat 9 surface reflectance imagery to generate a Building Index.</p>
+                        <a href="urbanDensity.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTqVJNDlwXFTKEWYlcviX6bActZO1CdaOBrV8E359uHHV4?width=256"
+                             alt="NDMI" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="NDMI.html" class="card-title">Normalized Difference Moisture Index (NDMI)</a>
+                        <p class="card-desc">Remote sensing analysis to monitor vegetation water content using satellite imagery data.</p>
+                        <a href="NDMI.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTNfuxedxmhRrcnyNyQ8nkbAb9KdSxGa5KhaxTMOWM597E?width=256"
+                             alt="SAVI" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="SAVI.html" class="card-title">Soil Adjusted Vegetation Index (SAVI)</a>
+                        <p class="card-desc">A spectral index developed to correct NDVI for soil brightness influence in areas with low vegetation cover.</p>
+                        <a href="SAVI.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTT8iq40qhYSpWMEUJft4DQAVLmZBMJrfzUKHQubc7yHoI?width=256"
+                             alt="Urban Heat Index" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="UHI.html" class="card-title">Urban Heat Island (UHI)</a>
+                        <p class="card-desc">Layering spatial data to identify where, why, and how heat concentrates in urban environments.</p>
+                        <a href="UHI.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTNjs78tl5bQYCT1ZInmTrDAelnWgDcMh-jXsba9C11rp8?width=256"
+                             alt="Land Surface Temperature" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="LST.html" class="card-title">Land Surface Temperature</a>
+                        <p class="card-desc">The "skin" temperature of the Earth's surface — representing how hot or cold the ground feels at a given moment.</p>
+                        <a href="LST.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-img-wrap">
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQRkJgZX7EjiSK3RZth1dvN3AYoYQ74kGTR28jqUkptVhFs?width=256"
+                             alt="UTFVI" class="card-img" onclick="openModal(this)" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <a href="UTFVI.html" class="card-title">Urban Thermal Field Variance Index (UTFVI)</a>
+                        <p class="card-desc">A metric to evaluate ecological health and thermal comfort of a city by measuring the intensity of the UHI effect.</p>
+                        <a href="UTFVI.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ──────── THESIS ──────── -->
+        <div class="thesis-section reveal" data-category="thesis">
+            <div class="category-heading">
+                <span class="cat-num">05</span>
+                <div>
+                    <div class="cat-label">Undergraduate Research</div>
+                    <div class="cat-name">Thesis Projects</div>
+                </div>
+                <div class="cat-divider"></div>
+            </div>
+
+            <div class="thesis-intro">
+                <p>
+                    During my undergraduate studies, my interest in GIS grew, particularly driven by my admiration for the human brain's ability to process spatial information.
+                    The question then arose: <em>"How can we introduce or scaffold this ability at a very basic level?"</em> This prompted me to research and develop a storybook for children that could introduce them to spatial abilities.
+                    The term "Spatial" is very close to us, but not many people realize it because they don't recognize it. Furthermore, to understand spatial information, we must be intimately familiar with what "spatial" is.
+                </p>
+            </div>
+
+            <div class="thesis-book">
+                <span class="thesis-book-label"><i class="fas fa-book-open"></i> &nbsp;Interactive Storybook — SPORE</span>
+                <div class="thesis-book-inner">
+                    <iframe src="https://online.fliphtml5.com/tlrbs/iaco/"
+                            title="Exploring The Enchanted Forest (ENG TRANSLATED)"
+                            seamless="seamless"
+                            scrolling="no"
+                            frameborder="0"
+                            allowtransparency="true"
+                            allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>    
+</div>
+<!-- END PAGE BODY -->
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="modal-overlay" id="imgModal" onclick="closeModal(event)">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <img src="" alt="Preview" class="modal-img" id="modalImg">
+    </div>
+    <!-- Your existing content above -->
+
+<!-- Your modal and other scripts -->
+    <script>
+        /* ---------- Mobile menu ---------- */
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('open');
+        }
+
+        /* ---------- Lightbox ---------- */
+        function openModal(img) {
+            document.getElementById('modalImg').src = img.src;
+            document.getElementById('imgModal').classList.add('open');
+        }
+        function closeModal(e) {
+            if (!e || e.target !== document.getElementById('modalImg')) {
+                document.getElementById('imgModal').classList.remove('open');
+            }
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') document.getElementById('imgModal').classList.remove('open');
+        });
+
+        /* ---------- Category filter ---------- */
+        function filterCategory(cat, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('[data-category]').forEach(section => {
+                if (cat === 'all' || section.dataset.category === cat) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        /* ---------- Scroll reveal ---------- */
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transitionDelay = (i * 0.05) + 's';
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>

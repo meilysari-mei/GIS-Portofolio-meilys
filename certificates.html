@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="style3_1.css">
+    <link rel="stylesheet" href="certificate_style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header" id="mainHeader">
+        <a href="index3_1.html" class="logo">Meily's GIS Portofolio<span>.</span></a>
+        <nav class="navbar" id="navbar">
+            <a href="index3_1.html" class="nav-link">Home</a>
+            <a href="index3_1.html#slide-about" class="nav-link">About</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="certificates.html" class="nav-link active">Certificates</a>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <!-- ======== SLIDE 4 : CERTIFICATES ======== -->
+<div class="slide-wrapper" id="slideWrapper">
+    <section class="slide slide-certs" id="slide-certs">
+
+        <div class="geo geo-1"></div>
+        <div class="geo geo-3"></div>
+
+        <div class="certs-layout">
+
+            <div class="section-intro">
+                <span class="section-tag">Professional Growth</span>
+
+                <h2 class="section-title">
+                    Certifications &
+                    <span>Training</span>
+                </h2>
+
+                <p class="section-desc">
+                    Continuous learning through GIS, remote sensing,
+                    spatial analysis, and web mapping programs.
+                </p>
+            </div>
+
+                <!-- CERTIFICATE GRID -->
+            <div class="cert-grid">
+
+                <!-- CARD -->
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQT_LsoigT4EQ62bjfgwzEBAAYXrz5xgKNxB09SdmRus-aQ?width=660">
+                </div>
+                <div class="cert-content">
+                    <h3>Spatial Analysis</h3>
+                    <p>Esri MOOC</p>
+                </div>
+                </div>
+
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTm-s3VeFI5S6mGnvIYIgl7AVM93GNGrqgcRdgHDvmbUvM?width=660">
+                </div>
+                <div class="cert-content">
+                    <h3>Climate Analysis</h3>
+                    <p>Esri MOOC</p>
+                </div>
+                </div>
+
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQT-jVCuTDV6TKeDvEY9KqBqASzoyF-vVFznvRxvaCgF0yw?width=660">
+                </div>
+                <div class="cert-content">
+                    <h3>GIS Data Management</h3>
+                    <p>Esri Training</p>
+                </div>
+                </div>
+
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQSR9OQCjNPJRLIUfc5P9hhDAXbpnxPNW-kQCyXPZjFaOLA?width=660">
+                </div>
+                <div class="cert-content">
+                    <h3>Map Visualization</h3>
+                    <p>Cartography & Design</p>
+                </div>
+                </div>
+
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQQAUdU46J8XSZtzpMikkRUhATZMQ2VLCrZfm9V5XtQSY7U?height=660">
+                </div>
+                <div class="cert-content">
+                    <h3>GIS Assistant</h3>
+                    <p>Professional Training</p>
+                </div>
+                </div>
+
+                <div class="cert-card">
+                <div class="cert-image">
+                    <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTqvbpnKe0zRa0fogWa86uoAdBat7Rd2qbMV1okyny9Jf0?width=660">
+                </div>
+                <div class="cert-content">
+                    <h3>JavaScript Basics</h3>
+                    <p>Frontend Development</p>
+                </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="slide-label">03</div>
+
+    </section>
+</div>
+
+<!-- END PAGE BODY -->
+    <!-- ===== LIGHTBOX MODAL ===== -->
+    <div class="modal-overlay" id="imgModal" onclick="closeModal(event)">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <img src="" alt="Preview" class="modal-img" id="modalImg">
+    </div>
+    <!-- Your existing content above -->
+
+<!-- Your modal and other scripts -->
+    <script>
+        /* ---------- Mobile menu ---------- */
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('open');
+        }
+
+        /* ---------- Lightbox ---------- */
+        function openModal(img) {
+            document.getElementById('modalImg').src = img.src;
+            document.getElementById('imgModal').classList.add('open');
+        }
+        function closeModal(e) {
+            if (!e || e.target !== document.getElementById('modalImg')) {
+                document.getElementById('imgModal').classList.remove('open');
+            }
+        }
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') document.getElementById('imgModal').classList.remove('open');
+        });
+
+        /* ---------- Category filter ---------- */
+        function filterCategory(cat, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('[data-category]').forEach(section => {
+                if (cat === 'all' || section.dataset.category === cat) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+
+        /* ---------- Scroll reveal ---------- */
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.transitionDelay = (i * 0.05) + 's';
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+
+</body>
+</html>

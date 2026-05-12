@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAVI</title>
+    <link rel="stylesheet" href="style_landchanges.css">
+    <link rel="stylesheet" href="style_body.css">
+    <link rel="stylesheet" href="style3_1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Title -->
+        <header class="outline-box header">
+            SOIL ADJUSTED VEGETATION INDEX (SAVI)
+        </header>
+
+        <!-- Map -->
+        <main class="outline-box map-container">
+            <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQTNfuxedxmhRrcnyNyQ8nkbAb9KdSxGa5KhaxTMOWM597E?width=1024" alt="SAVI Map">
+        </main>
+
+        <!-- Description Section -->
+        <section>
+            <div class="label">Short Description</div>
+            <div class="desc-box">
+                <a>The Soil-Adjusted Vegetation Index (SAVI) is a remote sensing tool used to estimate vegetation "greenness" while minimizing the misleading effects of soil brightness. 
+                    It is an enchancement of the widely used NDVI and is particularly valuavle in <b>arid or semi-arid regions</b> where sparse plant cover leaves much of the soil exposed<br>
+                    Why SAVI instead of NDVI?<br>
+                    SAVI (Soil Adjusted Vegetation Index) is used instead of NDVI primarily to minimize background soil brightness in areas with sparse vegetation (LESS than-40% cover), 
+                    providing more accurate results in arid or semi-arid regions. While NDVI saturates in high-density vegetation, SAVI offers better sensitivity, making it superior for distinguishing vegetation health.<br>
+                    This map shows a local mining area in Sambas Regency, West Kalimantan. Areas marked in red indicate sparse vegetation or low-value bare land, while green indicates vegetated areas.
+                </a>
+            </div>
+        </section>
+
+        <!-- Data Section -->
+        <section>
+            <div class="label">Tools and Data</div>
+            <div class="data-box">
+                <ul>
+                    <li>Tools : Google Earth Engine, ArcGIS PRO</li>
+                    <li>Method : SAVI = (NIR-red)/(NIR+red+L)x(1+L)</li>
+                    <li>Data Source : Landsat 9, Primary data extracted from Landsat 9 Imagery, USGS, processed using Google Earth Engine</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Description Problem -->
+        <section>
+            <div class="label">Functions</div>
+            <div class="desc-box">
+                <ol>
+                    <li>ESoil Background Correction: NDVI is highly sensitive to the soil color and moisture underneath the vegetation. SAVI introduces a soil adjustment factor (L) to correct this, reducing soil noise.</li>
+                    <li>Ideal for Low Vegetation Areas: In arid regions or early-season agricultural monitoring, the soil is often visible. SAVI is much better at identifying sparse vegetation from the bright, reflective soil background.</li>
+                </ol>
+            </div>
+        </section>
+</body>
+</html>

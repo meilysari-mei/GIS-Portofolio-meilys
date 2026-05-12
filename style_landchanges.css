@@ -1,0 +1,348 @@
+/* =====================================================
+   style_landchanges.css
+   Theme: Aligned with index3_1 — dark editorial, 
+   Cormorant Garamond + DM Sans, gold accents
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+  --bg-deep:      #0d0f12;
+  --bg-card:      #131619;
+  --bg-surface:   #1a1e23;
+  --bg-hover:     #1f242b;
+
+  --border:       rgba(255,255,255,0.07);
+  --border-gold:  rgba(212,175,89,0.35);
+
+  --gold:         #d4af59;
+  --gold-light:   #e8c97a;
+  --gold-dim:     rgba(212,175,89,0.12);
+
+  --text-primary:   #f0ece4;
+  --text-secondary: #a09b90;
+  --text-muted:     #5c5850;
+
+  --positive:     #6bbb8a;
+  --negative:     #e06b6b;
+
+  --radius-sm:  4px;
+  --radius-md:  10px;
+  --radius-lg:  18px;
+
+  --shadow-card: 0 4px 32px rgba(0,0,0,0.45);
+  --shadow-gold: 0 0 24px rgba(212,175,89,0.12);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.75;
+  min-height: 100vh;
+
+  /* subtle noise grain matching index3_1 atmosphere */
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% -10%, rgba(212,175,89,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 110%, rgba(212,175,89,0.04) 0%, transparent 55%);
+}
+
+/* ── Container ── */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 56px 32px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── Outline Box (shared base) ── */
+.outline-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Header ── */
+.header {
+  padding: 36px 48px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+
+  border-color: var(--border-gold);
+  background: linear-gradient(135deg, #141810 0%, var(--bg-card) 60%);
+
+  /* Gold top accent line */
+  border-top: 2px solid var(--gold);
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 120% at 50% -10%, rgba(212,175,89,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Small numbered label matching index3_1 slide-label style */
+.header::after {
+  display: block;
+  margin-top: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+/* ── Map / Image Container ── */
+.map-container {
+  padding: 0;
+  aspect-ratio: auto;
+}
+
+/* iframe responsive override */
+        /* iframe responsive override */
+.map-container iframe {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: none;
+  border-radius: var(--radius-lg);
+}
+
+.list-indent {
+  padding-left: 1.4em;
+}
+
+.list-spacing {
+  margin-top: 10px;
+}
+
+.map-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+/* ── Section Labels (like col-heading numbers in index3_1) ── */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.label::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+/* ── Description / Data Boxes ── */
+.desc-box,
+.data-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--border-gold);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.9;
+  position: relative;
+}
+
+.desc-box a,
+.data-box a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Italic lead sentences — echoing index3_1's <em> style */
+.desc-box > a:first-child,
+.desc-box > a:first-of-type {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  opacity: 0.85;
+}
+
+.desc-box ul,
+.data-box ol {
+  padding-left: 1.4em;
+  margin-top: 10px;
+}
+
+.desc-box li,
+.data-box li {
+  margin-bottom: 4px;
+  color: var(--text-secondary);
+}
+
+.desc-box br + a,
+.data-box br + a {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* ── Tables ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  font-size: 0.86rem;
+}
+
+thead tr,
+tr:has(.header-main) {
+  background: linear-gradient(90deg, #141810 0%, var(--bg-surface) 100%);
+}
+
+th {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border-gold);
+  text-align: left;
+}
+
+.header-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--text-primary);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.col-label { width: 42%; }
+.col-data  { width: 29%; }
+
+td {
+  padding: 11px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tbody tr {
+  transition: background 0.2s;
+}
+tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.text-right { text-align: right; }
+.text-left  { text-align: left; }
+
+/* Total row */
+tr.bold td {
+  font-weight: 500;
+  color: var(--negative);
+  font-family: 'DM Sans', sans-serif;
+  letter-spacing: 0.02em;
+  border-top: 1px solid rgba(224,107,107,0.2);
+}
+
+/* Positive/negative change cells */
+td.positive { color: var(--positive); font-weight: 500; }
+td:not(.positive):not(:first-child):has(+ td) {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Sections — spacing ── */
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Decorative geometric ring (matching geo-1/geo-2 in index3_1) ── */
+.container::before {
+  content: '';
+  position: fixed;
+  top: -120px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,175,89,0.06);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container::after {
+  content: '';
+  position: fixed;
+  bottom: -80px;
+  left: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px solid rgba(212,175,89,0.05);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content sits above pseudo-elements */
+.container > * { position: relative; z-index: 1; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb {
+  background: rgba(212,175,89,0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(212,175,89,0.45); }
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .container { padding: 32px 16px 56px; gap: 24px; }
+  .header { padding: 24px 20px; }
+  .desc-box, .data-box { padding: 20px 18px; }
+  th, td { padding: 10px 12px; font-size: 0.8rem; }
+}

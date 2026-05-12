@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meily's GIS Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3_1.css">
+    <script src="home2.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== NAVBAR ===== -->
+    <header class="header" id="mainHeader">
+        <a href="#slide-home" class="logo" onclick="goToSlide(0)">Meily's GIS Portofolio<span>.</span></a>
+        <nav class="navbar" id="navbar">
+            <a href="index3_1.html" class="nav-link active">Home</a>
+            <a href="index3_1.html#slide-about" class="nav-link">About</a>
+            <a href="portfolio.html" class="nav-link">Portfolio</a>
+            <a href="certificates.html" class="nav-link">Certificates</a>
+        </nav>
+        <div class="menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <!-- ===== SLIDE WRAPPER ===== -->
+    <div class="slide-wrapper" id="slideWrapper">
+
+        <!-- ======== SLIDE 1 : HOME ======== -->
+        <section class="slide slide-home" id="slide-home">
+
+            <!-- Decorative background grid -->
+            <div class="grid-overlay"></div>
+
+            <!-- Floating geometric rings -->
+            <div class="geo geo-1"></div>
+            <div class="geo geo-2"></div>
+            <div class="geo geo-3"></div>
+
+            <div class="home-center">
+                <div class="eyebrow">
+                    <span class="pulse-dot"></span>
+                    <span>Open to Opportunities</span>
+                </div>
+
+                <h1 class="home-title">
+                    <em class="line-thin">Welcome to</em>
+                    <strong class="line-bold">Meily's GIS</strong>
+                    <span class="line-outline">Portfolio</span>
+                </h1>
+
+                <p class="home-sub">
+                    Turning spatial data into meaningful insights —<br>
+                    remote sensing, network analysis &amp; urban mapping.
+                </p>
+
+                <div class="home-actions">
+                    <button class="btn-primary" onclick="goToSlide(1)">
+                        Explore Me <i class="fas fa-arrow-down"></i>
+                    </button>
+                    <a href="https://www.linkedin.com/in/meily-sari" target="_blank" rel="noopener" class="btn-ghost">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-cue" onclick="goToSlide(1)">
+                <span>Scroll</span>
+                <div class="cue-line"></div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="slide-label">01</div>
+        </section>
+
+        <!-- ======== SLIDE 2 : ABOUT ======== -->
+        <section class="slide slide-about" id="slide-about">
+
+            <div class="geo geo-4"></div>
+            <div class="geo geo-5"></div>
+
+            <div class="about-layout">
+
+                <!-- PROFILE — top center -->
+                <div class="profile-block">
+                    <div class="avatar-wrap">
+                        <div class="avatar-glow"></div>
+                        <img src="https://1drv.ms/i/c/ac53d8ec6e57d956/IQRhN2QFs8kjQ5SjlkpoeGRLAQ04LFkBVDisZfEdi1NePSU?height=256"
+                             alt="Meily Sari" class="avatar">
+                    </div>
+                    <h2 class="profile-name">Meily Sari</h2>
+                    <p class="profile-role">Junior GIS Analyst</p>
+                    <div class="profile-meta">
+                        <span><i class="fas fa-graduation-cap"></i> UNY · GPA 3.69 / 4.00</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</span>
+                        <span><i class="fas fa-envelope"></i> meilysari002@gmail.com</span>
+                    </div>
+                    <div class="profile-socials">
+                        <a href="https://www.linkedin.com/in/meily-sari" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:meilysari002@gmail.com" class="social-btn" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CONTENT — two columns below -->
+                <div class="about-cols">
+                    <div class="about-col">
+                        <h3 class="col-heading"><span>01</span> About Me</h3>
+                        <p>My journey in geography started with a curiosity about how our world is mapped and understood. Today that curiosity has evolved into a mission: using spatial data to build a more resilient future.</p>
+                        <p>I've trained regional teachers and local officials as a GIS Practitioner, facilitated disaster-resilience planning as a Research Assistant, and authored a children's storybook <em>"SPORE"</em> to introduce spatial thinking to kids.</p>
+                        <p>I perform rigorous technical analysis <em>and</em> communicate findings clearly to any audience.</p>
+                    </div>
+                    <div class="about-col">
+                        <h3 class="col-heading"><span>02</span> Technical Skills</h3>
+                        <div class="skill-list">
+                            <div class="skill-row">
+                                <div class="skill-label">
+                                    <span>ArcGIS Pro</span><span class="skill-lvl">Intermediate</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">
+                                    <span>QGIS</span><span class="skill-lvl">Intermediate</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">
+                                    <span>Google Earth Engine</span><span class="skill-lvl">Intermediate</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">
+                                    <span>Python · OSMnx · GeoPandas</span><span class="skill-lvl">Beginner</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" data-width="40%"></div></div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">
+                                    <span>JavaScript</span><span class="skill-lvl">Beginner</span>
+                                </div>
+                                <div class="skill-track"><div class="skill-fill" data-width="30%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-label">02</div>
+        </section>
+
+        <!-- ======== SLIDE 3 : PORTFOLIO ======== -->
+        <!--<div id="portfolio-container"></div>
+
+        <!-- LOAD CERTIFICATES -->
+        <!--<div id="certificates-container"></div>-->
+
+
+    </div>
+    <!-- ===== END SLIDE WRAPPER ===== -->
+
+
+    <!-- Dot navigation -->
+    <nav class="dot-nav">
+        <a href="index3_1.html" class="dot active" title="Home"></a>
+        <a href="index3_1.html#slide-about" class="dot" title="About"></a>
+        <a href="portfolio.html" class="dot" title="Portfolio"></a>
+        <a href="certificates.html" class="dot" title="Certificates"></a>
+    </nav>
+
+</body>
+</html>

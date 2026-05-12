@@ -9,7 +9,7 @@ My journey in geography started with a curiosity about how our world is mapped a
 I perform rigorous technical analysis and communicate findings clearly to any audience.
 
 🌐 Live Portfolio
-👉 meilysari-mei.github.io/GIS-Portofolio-meilys
+👉 https://meilysari-mei.github.io/GIS-Portofolio-meilys/
 
 🎓 Thesis / Undergraduate Research
 Interactive Storybook — SPORE
